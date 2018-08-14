@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from rest_framework import serializers
 from landcrowdy.ads.models import HousingAd, LandAd, JobAd, AD_TYPE_CHOICES, COUNTRY_CHOICES
 
