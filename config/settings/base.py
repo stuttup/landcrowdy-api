@@ -25,7 +25,7 @@ SECRET_KEY = 'c#-!x^di-(n7@h@_2p@j(%^ce#8-@m=ager%x_zfqq%034qfdb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.niangular.com', '51.75.16.159', 'localhost']
 
 # Application definition
 
@@ -125,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = join(BASE_DIR, 'static/')
 
 # DRF setup
 # http://www.django-rest-framework.org/
