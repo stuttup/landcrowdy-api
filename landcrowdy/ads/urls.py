@@ -1,11 +1,11 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from landcrowdy.ads import views
+from landcrowdy.ads.api import viewsets
 
 router = DefaultRouter()
-router.register('housing', views.HousingAdViewSet)
-router.register('land', views.LandAdViewSet)
-router.register('job', views.JobAdViewSet)
+router.register('housing', viewsets.HousingAdViewSet)
+router.register('land', viewsets.LandAdViewSet)
+router.register('job', viewsets.JobAdViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

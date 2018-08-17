@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from landcrowdy.users import views
+from landcrowdy.users.api import viewsets
 
 router = DefaultRouter()
-router.register('', views.UserViewSet)
+router.register('users', viewsets.UserViewSet)
 
 urlpatterns = [
-    path('users/', include(router.urls)),
+    path('', include(router.urls)),
 ]
