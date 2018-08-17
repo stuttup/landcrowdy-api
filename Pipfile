@@ -9,6 +9,7 @@ djangorestframework = "*"
 coreapi = "*"
 django-environ = "*"
 django-oauth-toolkit = "*"
+gunicorn = "*"
 
 [dev-packages]
 httpie = "*"
