@@ -6,7 +6,7 @@ class HousingAdSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = HousingAd
         fields = ('uuid', 'url', 'title', 'description', 'source', 'link', 'image', 'country', 'location', 'ad_type',
-                  'surface_area', 'price', 'rooms', 'housing_type', 'transaction_type')
+                  'surface_area', 'price', 'rooms', 'housing_type', 'transaction_type', 'published')
         extra_kwargs = {
             'url': {'lookup_field': 'uuid'}
         }
@@ -16,7 +16,7 @@ class LandAdSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = LandAd
         fields = ('uuid', 'url', 'title', 'description', 'source', 'link', 'image', 'country', 'location', 'ad_type',
-                  'surface_area', 'price', 'status', 'transaction_type')
+                  'surface_area', 'price', 'status', 'transaction_type', 'published')
         extra_kwargs = {
             'url': {'lookup_field': 'uuid'}
         }
@@ -26,7 +26,7 @@ class JobAdSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = JobAd
         fields = ('uuid', 'url', 'title', 'description', 'source', 'link', 'image', 'country', 'location', 'ad_type',
-                  'subjects', 'gross_salary', 'contract_type')
+                  'subjects', 'gross_salary', 'contract_type', 'published')
         extra_kwargs = {
             'url': {'lookup_field': 'uuid'}
         }

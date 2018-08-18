@@ -10,6 +10,7 @@ coreapi = "*"
 django-environ = "*"
 django-oauth-toolkit = "*"
 gunicorn = "*"
+"psycopg2" = "*"
 
 [dev-packages]
 httpie = "*"
