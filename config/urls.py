@@ -17,6 +17,7 @@ urlpatterns = [
     path('api/v1/docs/', docs_views),
     path('api/v1/', include('landcrowdy.ads.urls')),
     path('api/v1/', include('landcrowdy.users.urls')),
+    path('api/v1/', include('rest_framework.urls')),
     path('api/v1/admin/', admin.site.urls),
     path('api/v1/o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
