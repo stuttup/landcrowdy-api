@@ -10,11 +10,11 @@ from rest_framework.documentation import include_docs_urls
 
 
 schema_view = get_schema_view(title='Landcrowdy API')
-docs_views = include_docs_urls(title='Landcrowdy API')
+docs_view = include_docs_urls(title='Landcrowdy API')
 
 urlpatterns = [
     path('api/v1/schema/', schema_view),
-    path('api/v1/docs/', docs_views),
+    path('api/v1/docs/', docs_view),
     path('api/v1/', include('landcrowdy.ads.urls')),
     path('api/v1/', include('landcrowdy.users.urls')),
     path('api/v1/', include('rest_framework.urls')),
