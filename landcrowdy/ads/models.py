@@ -30,7 +30,7 @@ class HousingAd(models.Model):
     country = models.CharField(choices=[x.value for x in COUNTRIES], default='SN', max_length=2)
     location = models.CharField(max_length=250, blank=True)
     surface_area = models.IntegerField(blank=True, null=True)
-    price = models.IntegerField(blank=True, null=True)
+    price = models.BigIntegerField(blank=True, null=True)
     rooms = models.IntegerField(blank=True, null=True)
     ad_type = models.CharField(choices=[('Housing', 'Logement')], default='Housing', max_length=20, blank=True)
     housing_type = models.CharField(choices=[('House', 'Maison'), ('Flat', 'Appartement')],
@@ -70,7 +70,7 @@ class LandAd(models.Model):
     country = models.CharField(choices=[x.value for x in COUNTRIES], default='SN', max_length=2)
     location = models.CharField(max_length=250, blank=True)
     surface_area = models.IntegerField(blank=True, null=True)
-    price = models.IntegerField(blank=True, null=True)
+    price = models.BigIntegerField(blank=True, null=True)
     status = models.CharField(choices=[('Approved', 'Titré'), ('Not Approved', 'Non Titré')],
                               default='Approved', max_length=20, blank=True)
     ad_type = models.CharField(choices=[('land', 'Terrain')], default='Land', max_length=20)
@@ -110,7 +110,7 @@ class JobAd(models.Model):
     location = models.CharField(max_length=250, blank=True)
     ad_type = models.CharField(choices=[('Job', 'Emploi')], default='Job', max_length=20, blank=True)
     subjects = models.CharField(max_length=250, blank=True)
-    gross_salary = models.IntegerField(blank=True, null=True)
+    gross_salary = models.BigIntegerField(blank=True, null=True)
     contract_type = models.CharField(choices=[('CDI', 'CDI'), ('CDD', 'CDD'), ('Undefined', 'Non précisé')],
                                      default='Undefined', max_length=20, blank=True)
 
