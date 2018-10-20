@@ -15,6 +15,8 @@ class HousingAd(models.Model):
         maroc = ('MA', 'Maroc')
         kenya = ('KE', 'Kenya')
         tunisia = ('TN', 'Tunisie')
+        congo = ('CD', 'RD Congo')
+        gabon = ('GA', 'Gabon')
 
         @classmethod
         def get_value(cls, member):
@@ -55,6 +57,8 @@ class LandAd(models.Model):
         maroc = ('MA', 'Maroc')
         kenya = ('KE', 'Kenya')
         tunisia = ('TN', 'Tunisie')
+        congo = ('CD', 'RD Congo')
+        gabon = ('GA', 'Gabon')
 
         @classmethod
         def get_value(cls, member):
@@ -94,6 +98,8 @@ class JobAd(models.Model):
         maroc = ('MA', 'Maroc')
         kenya = ('KE', 'Kenya')
         tunisia = ('TN', 'Tunisie')
+        congo = ('CD', 'RD Congo')
+        gabon = ('GA', 'Gabon')
 
         @classmethod
         def get_value(cls, member):
